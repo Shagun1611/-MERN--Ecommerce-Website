@@ -92,8 +92,8 @@ const Order = () => {
   ) : error ? (
     <Messsage variant="danger">{error.data.message}</Messsage>
   ) : (
-    <div className="container flex flex-col ml-[10rem] md:flex-row">
-      <div className="md:w-2/3 pr-4">
+    <div className="container flex flex-col ml-[4rem] md:flex-row">
+      <div className="md:w-2/3 pr-14">
         <div className="border gray-300 mt-5 pb-4 mb-5">
           {order.orderItems.length === 0 ? (
             <Messsage>Order is empty</Messsage>
@@ -140,7 +140,7 @@ const Order = () => {
       </div>
 
       <div className="md:w-1/3">
-        <div className="mt-5 border-gray-300 pb-4 mb-4">
+        <div className="mt-4 border-gray-300 pb-4 mb-4">
           <h2 className="text-xl font-bold mb-2">Shipping</h2>
           <p className="mb-4 mt-4">
             <strong className="text-pink-500">Order:</strong> {order._id}
@@ -176,19 +176,19 @@ const Order = () => {
         <h2 className="text-xl font-bold mb-2 mt-[3rem]">Order Summary</h2>
         <div className="flex justify-between mb-2">
           <span>Items</span>
-          <span>$ {order.itemsPrice}</span>
+          <span>Rs. {order.itemsPrice}</span>
         </div>
         <div className="flex justify-between mb-2">
           <span>Shipping</span>
-          <span>$ {order.shippingPrice}</span>
+          <span>Rs. {order.shippingPrice}</span>
         </div>
         <div className="flex justify-between mb-2">
           <span>Tax</span>
-          <span>$ {order.taxPrice}</span>
+          <span>Rs. {order.taxPrice}</span>
         </div>
         <div className="flex justify-between mb-2">
           <span>Total</span>
-          <span>$ {order.totalPrice}</span>
+          <span>Rs. {order.totalPrice}</span>
         </div>
 
         {!order.isPaid && (

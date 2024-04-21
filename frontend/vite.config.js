@@ -6,8 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api/": "http://localhost:5000",
-      "/uploads/": "http://localhost:5000",
+      // "/api/": "http://localhost:5000",
+      // "/uploads/": "http://localhost:5000",
+      "/api/": "https://mern-ecommerce-website-xthw.onrender.com",
+      "/uploads/": "https://mern-ecommerce-website-xthw.onrender.com",
     },
   },
 });
+// One Change i have done here

@@ -28,7 +28,7 @@ const ProductCard = ({ p }) => {
             className="cursor-pointer w-full"
             src={p.image}
             alt={p.name}
-            style={{ height: "170px", objectFit: "cover" }}
+            style={{ height: "250px", objectFit: "cover" }}
           />
         </Link>
         <HeartIcon product={p} />
@@ -41,7 +41,7 @@ const ProductCard = ({ p }) => {
           <p className="text-black font-semibold text-pink-500">
             {p?.price?.toLocaleString("en-US", {
               style: "currency",
-              currency: "USD",
+              currency: "INR",
             })}
           </p>
         </div>

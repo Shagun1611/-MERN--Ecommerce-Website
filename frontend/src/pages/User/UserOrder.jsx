@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+
 import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ const UserOrder = () => {
             {orders.map((order) => (
               <tr key={order._id}>
                 <img
-                  src={`${BASE_URL}${order.orderItems[0].image}`} // This is for server when you want to view locally only use src={order.orderItems[0].image} and for production use src={`${BASE_URL}${order.orderItems[0].image}`}
+                  src={order.orderItems[0].image}// This is for server when you want to view locally only use src={order.orderItems[0].image} and for production use src={`${BASE_URL}${order.orderItems[0].image}`}
                   alt={order.user}
                   className="w-[6rem] mb-5"
                 />

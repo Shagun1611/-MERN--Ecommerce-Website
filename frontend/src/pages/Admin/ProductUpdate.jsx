@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+
 import { useState, useEffect } from "react";
 import AdminMenu from "./AdminMenu";
 import { useNavigate, useParams } from "react-router-dom";
@@ -143,7 +143,7 @@ const AdminProductUpdate = () => {
             {image && (
               <div className="text-center">
                 <img
-                 src={`${BASE_URL}${image}`} // This is for server when you want to view locally only use src={image} and for production use src={`${BASE_URL}${image}`}
+                 src={image} // This is for server when you want to view locally only use src={image} and for production use src={`${BASE_URL}${image}`}
                   alt="product"
                   className="block mx-auto w-full h-[40%]"
                 />

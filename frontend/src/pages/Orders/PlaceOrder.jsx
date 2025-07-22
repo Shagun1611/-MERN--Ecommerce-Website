@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -67,7 +67,7 @@ const PlaceOrder = () => {
                   <tr key={index}>
                     <td className="p-2">
                       <img
-                        src={`${BASE_URL}${item.image}`} // This is for server when you want to view locally only use src={item.image} and for production use src={`${BASE_URL}${item.image}`}
+                        src={item.image} // This is for server when you want to view locally only use src={item.image} and for production use src={`${BASE_URL}${item.image}`}
                         alt={item.name}
                         className="w-16 h-16 object-cover"
                       />

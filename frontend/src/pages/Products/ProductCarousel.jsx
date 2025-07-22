@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+
 import { useGetTopProductsQuery } from "../../redux/api/productApiSlice";
 import Message from "../../components/Message";
 import Slider from "react-slick";
@@ -54,7 +54,7 @@ const ProductCarousel = () => {
             }) => (
               <div key={_id}>
                 <img
-                  src={`${BASE_URL}${image}`} // This is for server when you want to view locally only use src={image} and for production use src={`${BASE_URL}${image}`}
+                  src={image}// This is for server when you want to view locally only use src={image} and for production use src={`${BASE_URL}${image}`}
                   alt={name}
                   className="w-full rounded-lg object-cover h-[30rem]"
                 />

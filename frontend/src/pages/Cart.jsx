@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL;
+
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa";
@@ -39,7 +39,7 @@ const Cart = () => {
                 <div key={item._id} className="flex items-enter mb-[1rem] pb-2">
                   <div className="w-[5rem] h-[5rem]">
                     <img
-                       src={`${BASE_URL}${item.image}`}    // This is for server when  you want to view locally only use src={p.image} and for production use src={`${BASE_URL}${p.image}`}
+                       src={item.image}    // This is for server when  you want to view locally only use src={p.image} and for production use src={`${BASE_URL}${p.image}`}
                       alt={item.name}
                       className="w-full h-full object-cover rounded"
                     />

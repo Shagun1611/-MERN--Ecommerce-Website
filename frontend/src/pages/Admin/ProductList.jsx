@@ -1,4 +1,4 @@
-import { useState } from "react";
+const BASE_URL = import.meta.env.VITE_API_URL;import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   useCreateProductMutation,
@@ -78,7 +78,7 @@ const ProductList = () => {
           {imageUrl && (
             <div className="text-center">
               <img
-                src={imageUrl}
+                 src={`${BASE_URL}${imageUrl}`} // ✅ Full image URL for Render
                 alt="product"
                 className="block mx-auto max-h-[200px]"
               />

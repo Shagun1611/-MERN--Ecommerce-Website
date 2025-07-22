@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import HeartIcon from "./HeartIcon";
 
@@ -7,7 +8,7 @@ const Product = ({ product }) => {
     <div className="w-[25rem] ml-[3rem] p-10 relative">
       <div className="relative">
         <img
-          src={product.image}
+          src={`${BASE_URL}${product.image}`} // This is for server when you want to view locally only use src={product.image} and for production use src={`${BASE_URL}${product.image}`}
           alt={product.name}
           className="w-[30rem] rounded"
         />

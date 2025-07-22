@@ -1,3 +1,4 @@
+const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import moment from "moment";
 import { useAllProductsQuery } from "../../redux/api/productApiSlice";
@@ -31,7 +32,7 @@ const AllProducts = () => {
                 >
                   <div className="flex">
                     <img
-                      src={product.image}
+                      src={`${BASE_URL}${product.image}`} // This is for server when you want to view locally only use src={product.image} and for production use src={`${BASE_URL}${product.image}`}
                       alt={product.name}
                       className="w-[10rem] object-cover"
                     />

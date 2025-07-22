@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
@@ -27,7 +27,7 @@ const ProductCard = ({ p }) => {
           </span>
           <img
             className="cursor-pointer w-full"
-            src={p.image}   // This is for server when  you want to view locally only use src={p.image} and for production use src={`${BASE_URL}${p.image}`}
+            src={`${BASE_URL}${p.image}`}  // This is for server when  you want to view locally only use src={p.image} and for production use src={`${BASE_URL}${p.image}`}
             alt={p.name}
             style={{ height: "250px", objectFit: "cover" }}
           />

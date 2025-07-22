@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
@@ -26,7 +27,7 @@ const ProductCard = ({ p }) => {
           </span>
           <img
             className="cursor-pointer w-full"
-            src={p.image}
+            src={`${BASE_URL}${p.image}`}
             alt={p.name}
             style={{ height: "250px", objectFit: "cover" }}
           />
